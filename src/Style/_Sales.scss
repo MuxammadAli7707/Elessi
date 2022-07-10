@@ -1,0 +1,119 @@
+.sales {
+  margin-top: 40px;
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__lists {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__itms {
+    display: flex;
+    margin-bottom: 25px;
+    transition: all 0.5s ease;
+
+    &:hover {
+      .sales__box::before {
+        opacity: 0.3;
+        transition: all 0.5s ease;
+      }
+
+      .sales__btn {
+        opacity: 1;
+      }
+    }
+  }
+
+
+  &__box {
+    position: relative;
+    margin-right: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #333;
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    border: none;
+    transform: translate(-50%,-50%);
+    font-size: 17px;
+    transition: all 0.4s ease;
+    opacity: 0;
+
+    &:hover {
+      color: #fff;
+      background: #6bad0d;
+    }
+  }
+
+  &__img {
+    width: 80px;
+    height: 88px;
+    object-fit: cover;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-size: 16px;
+    color: #333;
+    transition: all 0.4s ease;
+
+    &:hover {
+      color: #6bad0d;
+    }
+  }
+  &__star {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__old {
+    font-size: 14px;
+    color: #aaa;
+    margin-right: 8px;
+  }
+
+  &__new {
+    font-size: 16px;
+    color: #333;
+  }
+}
+
+.bxs-star {
+  color: #ffff00;
+}

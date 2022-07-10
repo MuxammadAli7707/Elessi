@@ -1,0 +1,12 @@
+.partner {
+  padding-top: 10px;
+  margin-bottom: 30px;
+  
+  &__img {
+    transition: all 350ms ease;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

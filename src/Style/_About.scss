@@ -1,0 +1,41 @@
+.about {
+  margin: 50px 0;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover i{
+      animation: about 0.7s ease;
+    }
+
+    i {
+      font-size: 37px;
+      color: #6bad0d;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+
+  &__text {
+    font-size: 15px;
+    color: #999;
+  }
+
+}
+
+.about__icon {
+  transform: rotate(90deg);
+}
