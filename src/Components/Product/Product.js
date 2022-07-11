@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Object from "../../Object/Object";
 import ProductList from "./ProductList";
 import fire from "../../Images/flame.png";
@@ -10,6 +10,47 @@ function Product() {
   const myCartAdd = Store(state => state.myCartAdd)
 
   return (
+    <>
+      <div className="loc-box">
+        {Object.map((item, i) => {
+          if(item.id == location.pathname.split("/").at(-1)) {
+            return (
+              <h4 className="loc-title">{item.name}</h4>
+            )
+          }
+        })}
+        <ul className="loc-list">
+          <li className="loc-item">
+          <Link className="loc-link" to='/'>
+          Home
+          <i className='bx bx-chevron-right'></i>
+          </Link>
+          </li>
+          <li className="loc-item">
+          <Link className="loc-link" to='/'>
+          Organics
+          <i className='bx bx-chevron-right'></i>
+          </Link>
+          </li>
+          <li className="loc-item">
+          <Link className="loc-link" to='/'>
+          Vegetables
+          <i className='bx bx-chevron-right'></i>
+          </Link>
+          </li>
+          <li className="loc-item">
+          <Link className="loc-link" to='/'>
+          Daily Vegetables
+          <i className='bx bx-chevron-right'></i>
+          </Link>
+          </li>
+          <li className="loc-item">
+          <Link className="loc-link" to='/'>
+          Root Vegetables
+          </Link>
+          </li>
+        </ul>
+      </div>
     <div className="container">
       {Object.map((item, i) => {
         if (item.id == location.pathname.split("/").at(-1)) {
@@ -130,6 +171,7 @@ function Product() {
         }
       })}
     </div>
+    </>
   );
 }
 

@@ -339,3 +339,40 @@
       height: 48px;
   }
 }
+
+.loc-box {
+  background-image: url('../Images/oraganic-back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.loc-title {
+  font-size: 20px;
+}
+
+.loc-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.loc-link {
+  display: flex;
+  align-items: center;
+  color: #333;
+
+  &:hover {
+    color: #6bad0d;
+  }
+}
+
+.loc-item{
+  margin-right: 8px;
+}
